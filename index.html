@@ -1,0 +1,361 @@
+<!doctype html>
+<html data-theme="dark" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./src/output.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div className="w-full min-h-screen">
+      <header
+        id="header"
+        class="relative w-full min-h-screen flex flex-col items-center mb-36"
+        style="background-image: url(&quot;./Image/image.png&quot;)"
+      >
+        <nav
+          class="fixed top-0 left-0 w-full px-4 py-1 bg-white shadow-md flex items-center justify-between z-10"
+        >
+          <a
+            href=""
+            class="flex gap-2 items-center hover:scale-105 transition-transform duration-300 text-blue-700"
+          >
+            <img
+              src="./Image/BCO.754679e0-8c3b-4e52-b0f7-e0c5c87d23bb.png"
+              alt="Logo"
+              class="w-28 rounded-2xl"
+            />
+            <span class="text-xl font-medium text-blue-600">AI Doktor</span>
+          </a>
+          <ul
+            class="flex gap-5 text-lg font-semibold text-gray-700 leading-tight"
+          >
+            <li class="navbar"><a href="#header">Asosiy</a></li>
+            <li class="navbar"><a href="#main">Imkoniyatlar</a></li>
+            <li class="navbar"><a href="#samaradorlik">Samaradorlik</a></li>
+            <li class="navbar"><a href="#boglanish">Bog'lanish</a></li>
+          </ul>
+        </nav>
+
+        <div class="flex flex-col absolute top-[20%] right-[5%] text-right">
+          <h2 class="text-6xl mb-8 text-blue-700 font-bold">
+            Tibbiyotda Sun’iy Intellekt
+          </h2>
+          <div class="absolute top-full right-9">
+            <p
+              class="text-lg mb-8 text-gray-600 bg-gray-200 p-3.5 rounded-2xl w-150 text-left"
+            >
+              Sun'iy intellekt tibbiyot va diagnostika sohasida inqilob
+              qilmoqda, bemorlarning salomatligi va hayot sifatini yaxshilash
+              uchun yangi vositalar va usullarni taqdim etmoqda. Tibbiy tasvirni
+              tahlil qilish va kasalliklarni erta tashxislashdan
+              shaxsiylashtirilgan davolash va robotli jarrohlik tizimlarigacha
+              AI tibbiy amaliyotda yangi ufqlarni ochmoqda. Ushbu innovatsiyalar
+              shifokorlarga aniqroq qarorlar qabul qilish, tadqiqotlarni
+              tezlashtirish va umumiy sog'liqni saqlash samaradorligini
+              oshirishga yordam beradi.
+            </p>
+            <button class="btn btn-info">
+              <a
+                href="https://mediapark.uz/uz/blog/post/tibbiyot-va-diagnostikada-suniy-intellektdan-qanday-foydalanish-kerak?utm_source=copilot.com"
+                >Ko'proq ma'lumot</a
+              >
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <section id="main" class="flex flex-col items-center">
+        <h2 class="text-4xl font-bold mb-5">
+          AI ning tibbiyotdagi imkoniyatlari
+        </h2>
+        <h3 class="text-3xl font-semibold mb-4">Sun'iy Intellekt nima?</h3>
+        <p
+          class="text-black bg-accent p-3.5 rounded-2xl w-150 hover:cursor-pointer"
+        >
+          Sun'iy intellekt — bu kompyuter tizimlarining inson fikrlashiga
+          o‘xshash tarzda o‘rganish, tahlil qilish va qaror qabul qilish
+          qobiliyatidir. Tibbiyotda u kasalliklarni aniqlash, davolash va
+          profilaktikada katta yordam beradi.
+        </p>
+        <ul
+          class="gap-5 flex flex-wrap justify-center my-8 hover:cursor-pointer"
+        >
+          <li class="card">
+            <i class="fa-solid fa-brain icon fa-4x"></i>
+            <h3>Tashhisni aniqlash</h3>
+            <p>
+              Sun'iy intellekt tibbiy tasvirlarni tahlil qilishda yuqori
+              aniqlikka erishadi va kasalliklarni erta bosqichda aniqlaydi.
+            </p>
+          </li>
+          <li class="card">
+            <i class="fa-regular fa-heart icon fa-4x"></i>
+            <h3>Yurak kasalliklari</h3>
+            <p>
+              AI yurak-qon tomir tizimi kasalliklarini bashorat qilish va oldini
+              olishda muhim rol o'ynaydi.
+            </p>
+          </li>
+          <li class="card">
+            <i class="fa-solid fa-stethoscope icon fa-4x"></i>
+            <h3>Virtual shifokorlar</h3>
+            <p>
+              AI asosidagi virtual yordamchilar bemorlarni dastlabki
+              tekshiruvdan o'tkazadi va maslahat beradi.
+            </p>
+          </li>
+          <li class="card">
+            <i class="fa-solid fa-microscope icon fa-4x"></i>
+            <h3>Laboratoriya tahlili</h3>
+            <p>
+              Tibbiy tahlillarni avtomatlashtirish va natijalarni tezda qayta
+              ishlash imkoniyati.
+            </p>
+          </li>
+          <li class="card">
+            <i class="fa-solid fa-bed-pulse icon fa-4x"></i>
+            <h3>Bemor monitoringi</h3>
+            <p>
+              24/7 bemorning holatini kuzatish va o'zgarishlar haqida darhol
+              xabardor qilish.
+            </p>
+          </li>
+          <li class="card">
+            <i class="fa-solid fa-shield-virus icon fa-4x"></i>
+            <h3>Xavfsizlik</h3>
+            <p>
+              Tibbiy xatolarni kamaytirish va davolash samaradorligini oshirish.
+            </p>
+          </li>
+        </ul>
+      </section>
+
+      <section id="samaradorlik" class="flex flex-col items-center text-center">
+        <div class="bg-blue-600 w-full py-14">
+          <h2 class="text-5xl font-bold mb-5">AI ning samaradorligi</h2>
+          <span class="text-xl text-gray-300 mb-10">Raqamlarda natijalar</span>
+          <ul class="gap-5 flex flex-wrap justify-center my-8">
+            <li class="prosses">
+              <span class="text-5xl font-bold">87%</span>
+              <span>Aniqlik darajasi</span>
+            </li>
+            <li class="prosses">
+              <span class="text-5xl font-bold">60%</span>
+              <span>Vaqt tejash</span>
+            </li>
+            <li class="prosses">
+              <span class="text-5xl font-bold">40%</span>
+              <span>Xarajatlarni qisqartirish</span>
+            </li>
+            <li class="prosses">
+              <span class="text-5xl font-bold">95%</span>
+              <span>Bemor qoniqishi</span>
+            </li>
+          </ul>
+        </div>
+        <div class="bg-linear-to-bl from-blue-700 to-fuchsia-500 w-full py-14">
+          <h2 class="text-5xl font-bold mb-5">
+            Kelajak texnologiyasi bilan tanishing
+          </h2>
+          <p class="text-xl text-gray-300 mb-10">
+            AI tibbiyotni yanada xavfsiz, tez va samarali qilmoqda
+          </p>
+          <div class="flex gap-14 justify-center mb-10">
+            <button class="btn btn-primary">Konsultatsiya</button>
+            <button class="btn btn-primary">Hujjatlar</button>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="flex gap-16 w-full h-full">
+          <div class="image-wrapper">
+            <img
+              src="https://images.unsplash.com/photo-1770777843445-2a1621b1201d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBvZmZpY2UlMjBjb2xsYWJvcmF0aW9ufGVufDF8fHx8MTc3MzcwOTkzMnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+              alt=""
+              class="w-3xl h-screen object-cover inset-0 bg-violet-600/40"
+            />
+          </div>
+          <div class="flex flex-col items-center py-12">
+            <h2 class="text-4xl font-bold mb-5">Biz bilan bog'laning</h2>
+            <p class="text-xl text-base-content mb-10">
+              Ma'lumotlaringizni qoldiring, biz siz bilan tez orada bog'lanamiz
+            </p>
+            <div class="connect">
+              <label for="name">Ism</label>
+              <input
+                class="input input-lg input-accent p-6 mb-3.5"
+                type="name"
+                placeholder="Ismingizni kiriting"
+              />
+            </div>
+            <div class="connect">
+              <label for="surname">Familiya</label>
+              <input
+                class="input input-lg input-accent p-6 mb-3.5"
+                type="surname"
+                placeholder="Familiyangizni kiriting"
+              />
+            </div>
+            <div class="connect">
+              <label for="email">Email</label>
+              <input
+                class="input input-lg input-accent p-6 mb-3.5"
+                type="email"
+                placeholder="Emailingizni kiriting"
+              />
+            </div>
+            <div class="connect">
+              <label for="phone">Telefon raqami</label>
+              <input
+                class="input input-lg input-accent p-6 mb-3.5"
+                type="phone"
+                placeholder="+998 90 562 14 23"
+              />
+            </div>
+            <div class="connect">
+              <label for="text">Xabar</label>
+              <input
+                class="input input-lg input-accent p-6 pb-20 mb-3.5"
+                type="text"
+                placeholder="Xabaringizni kiriting..."
+              />
+            </div>
+            <button id="submitBtn" class="btn btn-primary text-xl py-2.5 px-5">
+              Yuborish
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <footer id="boglanish" class="bg-cyan-950">
+        <div
+          class="flex justify-between gap-12 p-2.5 border-b border-gray-500 mb-2.5"
+        >
+          <div class="flex flex-col justify-start p-2.5">
+            <a href="#header" class="flex gap-1.5 items-center">
+              <img
+                src="./Image/BCO.754679e0-8c3b-4e52-b0f7-e0c5c87d23bb.png"
+                alt="Logo"
+                class="w-28 rounded-2xl"
+              />
+              <span class="text-xl font-medium text-blue-600">AI Doktor</span>
+            </a>
+            <p class="text-base-content w-3xs text-start">
+              Sun'iy intellekt orqali tibbiyotni yanada yaxshi qilish
+            </p>
+          </div>
+          <div class="p-2.5 flex gap-1.5">
+            <div class="flex flex-col gap-2.5 justify-start">
+              <h4 class="text-lg font-semibold mb-2.5">Havolalar</h4>
+              <ul class="flex flex-col gap-2">
+                <li
+                  id=""
+                  class="text-base-content hover:text-gray-500 transition-all duration-100"
+                >
+                  <a href="#header">Bosh sahifa</a>
+                </li>
+                <li
+                  id=""
+                  class="text-base-content hover:text-gray-500 transition-all duration-100"
+                >
+                  <a
+                    href="https://www.accio.com/c/ioxusxhqs9jdv18ybp8xoi?src=p_GoogleSearch_web&cmpgn=22286337300&adgrp=196433615441&fditm=&tgt=kwd-474649323008&locintrst=&locphyscl=1028523&mtchtyp=b&ntwrk=g&device=c&dvcmdl=&creative=796423152476&plcmnt=&plcmntcat=&aceid=&position=&gad_source=1&gad_campaignid=22286337300&gbraid=0AAAAA-lIm6g729RhutOJscngmtGpwYNXx&gclid=CjwKCAjwjtTNBhB0EiwAuswYhq3utGpXK2TuBTpydpcS5fvcZAiB_wjh57oELhYfGpHowRD0lK40MhoCgh4QAvD_BwE"
+                    >AI bilan xarid</a
+                  >
+                </li>
+                <li
+                  id="aboutLink"
+                  class="text-base-content hover:text-gray-500 transition-all duration-100"
+                >
+                  <a href="">Biz haqimizda</a>
+                </li>
+                <li
+                  id=""
+                  class="text-base-content hover:text-gray-500 transition-all duration-100"
+                >
+                  <a href="">Blog</a>
+                </li>
+              </ul>
+            </div>
+            <div id="aboutCard"></div>
+          </div>
+          <div class="p-2.5">
+            <h4 class="text-lg font-semibold mb-2.5">Qo'llab quvvatlash</h4>
+            <ul class="flex flex-col gap-2 text-gray-200">
+              <li
+                id=""
+                class="text-base-content hover:text-gray-500 transition-all duration-100"
+              >
+                <a href="">Yordam markazi</a>
+              </li>
+              <li
+                id=""
+                class="text-base-content hover:text-gray-500 transition-all duration-100"
+              >
+                <a href="">Hujjatlar</a>
+              </li>
+              <li
+                id=""
+                class="text-base-content hover:text-gray-500 transition-all duration-100"
+              >
+                <a href="">FAQ</a>
+              </li>
+              <li
+                id=""
+                class="text-base-content hover:text-gray-500 transition-all duration-100"
+              >
+                <a href="">Bog'lanish</a>
+              </li>
+            </ul>
+          </div>
+          <div class="p-2.5">
+            <h4 class="text-lg font-semibold mb-2.5">Ijtimoiy tarmoqlar</h4>
+            <div class="flex flex-col gap-2">
+              <button class="btn bg-blue-600 text-white hover:bg-blue-700">
+                <a href="https://www.linkedin.com/login">
+                  <i class="fa-brands fa-linkedin-in"></i> Login with
+                  LinkedIn</a
+                >
+              </button>
+
+              <button class="btn btn-info text-white hover:bg-blue-600">
+                <a href="https://www.facebook.com/">
+                  <i class="fa-brands fa-facebook-f"></i> Login with Facebook</a
+                >
+              </button>
+
+              <button class="btn bg-sky-400 text-white hover:bg-sky-500">
+                <a href="https://mail.google.com/mail/u/0/#inbox"
+                  ><i class="fa-regular fa-envelope"></i> Login with Email</a
+                >
+              </button>
+
+              <button
+                class="btn bg-linear-to-r from-[#cf175a] to-[#9853ed] text-white hover:opacity-90"
+              >
+                <a href="https://www.instagram.com/"
+                  ><i class="fa-brands fa-instagram mr-2"></i> Login with
+                  Instagram</a
+                >
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="flex justify-center p-1.5 text-base-content">
+          <p class="text-[12px]">
+            © 2026 Tibbiyot AI. Barcha huquqlar himoyalangan.
+          </p>
+        </div>
+      </footer>
+
+      <script src="./js/app.js"></script>
+    </div>
+  </body>
+</html>
