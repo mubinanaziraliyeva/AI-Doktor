@@ -173,7 +173,10 @@
             >
               Konsultatsiya
             </button>
-            <button class="btn btn-soft btn-primary text-xl p-6">
+            <button
+              class="btn btn-soft btn-primary text-xl p-6"
+              onclick="openDocsModal()"
+            >
               Hujjatlar
             </button>
           </div>
@@ -196,7 +199,7 @@
             </h3>
             <button
               id="consult-close"
-              class="w-8 h-8 flex items-center justify-center rounded-lg hover:bg-gray-100 transition"
+              class="w-8 h-8 flex items-center justify-center text-gray-950 rounded-lg hover:bg-gray-200 transition"
               aria-label="Yopish"
             >
               ✕
@@ -223,7 +226,7 @@
                     id="firstName"
                     name="firstName"
                     placeholder="Ismingiz"
-                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 outline-none transition"
+                    class="w-full placeholder-gray-400 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 outline-none transition"
                   />
                 </div>
                 <div>
@@ -237,7 +240,7 @@
                     id="lastName"
                     name="lastName"
                     placeholder="Familyangiz"
-                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 outline-none transition"
+                    class="w-full placeholder-gray-400 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 outline-none transition"
                   />
                 </div>
               </div>
@@ -254,7 +257,7 @@
                   id="email"
                   name="email"
                   placeholder="example@email.com"
-                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 outline-none transition"
+                  class="w-full placeholder-gray-400 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 outline-none transition"
                 />
               </div>
 
@@ -270,7 +273,7 @@
                   id="phone"
                   name="phone"
                   placeholder="+998 90 123 45 67"
-                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 outline-none transition"
+                  class="w-full placeholder-gray-400 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 outline-none transition"
                 />
               </div>
 
@@ -284,7 +287,7 @@
                 <select
                   id="specialty"
                   name="specialty"
-                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 outline-none transition"
+                  class="w-full text-gray-400 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 outline-none transition"
                 >
                   <option value="">Mutaxassislikni tanlang</option>
                   <option value="cardiology">
@@ -311,7 +314,7 @@
                   name="message"
                   rows="4"
                   placeholder="Shikoyatlaringiz yoki savollaringizni yozing..."
-                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 outline-none transition resize-none"
+                  class="w-full placeholder-gray-400 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 outline-none transition resize-none"
                 ></textarea>
               </div>
 
@@ -390,6 +393,10 @@
               // Here you could send the data to the server using fetch(). For demo, show success message.
               form.style.display = "none";
               success.style.display = "block";
+              // Show confirmation message to the user
+              alert(
+                "So'rovingiz qabul qilindi, keyinroq siz bilan bog'lanamiz",
+              );
 
               // Reset and close after 3 seconds
               setTimeout(function () {
@@ -420,6 +427,7 @@
             <div class="connect">
               <label for="name">Ism</label>
               <input
+                id="name"
                 class="input input-lg input-accent p-6 mb-3.5"
                 type="name"
                 placeholder="Ismingizni kiriting"
@@ -428,6 +436,7 @@
             <div class="connect">
               <label for="surname">Familiya</label>
               <input
+                id="surname"
                 class="input input-lg input-accent p-6 mb-3.5"
                 type="surname"
                 placeholder="Familiyangizni kiriting"
@@ -436,6 +445,7 @@
             <div class="connect">
               <label for="email">Email</label>
               <input
+                id="email"
                 class="input input-lg input-accent p-6 mb-3.5"
                 type="email"
                 placeholder="Emailingizni kiriting"
@@ -457,12 +467,231 @@
                 placeholder="Xabaringizni kiriting..."
               />
             </div>
-            <button id="submitBtn" class="btn btn-primary text-xl py-2.5 px-5">
+            <button
+              id="submitBtn"
+              onclick="handleSubmit()"
+              class="btn btn-primary text-xl py-2.5 px-5"
+            >
               Yuborish
             </button>
+            <script>
+              function handleSubmit() {
+                const name = document.getElementById("name").value;
+                const surname = document.getElementById("surname").value;
+                const phone = document.getElementById("phone").value;
+                const message = document.getElementById("message").value;
+
+                console.log();
+                console.log("Telefon:", phone);
+                console.log("Xabar:", message);
+
+                alert(name + " Arizangiz qabul qilindi!");
+              }
+            </script>
           </div>
         </div>
       </section>
+
+      <!-- Documents modal (hidden by default) -->
+      <div
+        id="docs-modal"
+        style="display: none"
+        class="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4"
+      >
+        <div
+          class="bg-white rounded-2xl shadow-2xl max-w-3xl w-full max-h-[90vh] overflow-auto"
+        >
+          <div
+            class="sticky top-0 bg-white border-b border-gray-200 px-8 py-4 flex items-center justify-between"
+          >
+            <h3 class="text-2xl font-bold text-gray-800">Hujjatlar</h3>
+            <button
+              onclick="closeDocsModal()"
+              class="w-8 h-8 flex items-center justify-center text-gray-950 rounded-lg hover:bg-gray-200 transition"
+              aria-label="Yopish"
+            >
+              ✕
+            </button>
+          </div>
+
+          <div class="p-8">
+            <p class="text-gray-600 mb-6">
+              Uni foydalanuvchi uchun foydali qilish uchun quyidagilarni mumkin
+              qilish:
+            </p>
+
+            <!-- PDF Documents Section -->
+            <div class="mb-8">
+              <h4 class="font-bold text-gray-800 mb-4 flex items-center gap-2">
+                <span
+                  style="
+                    display: inline-flex;
+                    width: 20px;
+                    height: 20px;
+                    align-items: center;
+                    justify-content: center;
+                    background: #7c3aed;
+                    color: #fff;
+                    border-radius: 4px;
+                  "
+                  >📄</span
+                >
+                PDF hujjatlar
+              </h4>
+              <div class="space-y-3">
+                <div
+                  class="flex items-center justify-between p-4 bg-purple-50 rounded-lg border border-purple-200 hover:bg-purple-100 transition"
+                >
+                  <div class="flex items-center gap-3">
+                    <div
+                      class="w-10 h-10 bg-purple-600 rounded-lg flex items-center justify-center text-white"
+                    >
+                      📄
+                    </div>
+                    <div>
+                      <p class="font-medium text-gray-800">
+                        Maxfiylik siyosati
+                      </p>
+                      <p class="text-sm text-gray-600">
+                        Ma'lumotlaringiz qanday himoyalanadi
+                      </p>
+                    </div>
+                  </div>
+                  <a
+                    href="./public/docs/maxfiylik siyosati.pdf.docx"
+                    class="p-2 hover:bg-purple-200 rounded-lg transition"
+                    >📥</a
+                  >
+                </div>
+
+                <div
+                  class="flex items-center justify-between p-4 bg-blue-50 rounded-lg border border-blue-200 hover:bg-blue-100 transition"
+                >
+                  <div class="flex items-center gap-3">
+                    <div
+                      class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center text-white"
+                    >
+                      📄
+                    </div>
+                    <div>
+                      <p class="font-medium text-gray-800">Shartlar</p>
+                      <p class="text-sm text-gray-600">
+                        Xizmat ko'rsatish shartlari
+                      </p>
+                    </div>
+                  </div>
+                  <a
+                    href="./public/docs/service.pdf.docx"
+                    class="p-2 hover:bg-blue-200 rounded-lg transition"
+                    >📥</a
+                  >
+                </div>
+
+                <div
+                  class="flex items-center justify-between p-4 bg-indigo-50 rounded-lg border border-indigo-200 hover:bg-indigo-100 transition"
+                >
+                  <div class="flex items-center gap-3">
+                    <div
+                      class="w-10 h-10 bg-indigo-600 rounded-lg flex items-center justify-center text-white"
+                    >
+                      📄
+                    </div>
+                    <div>
+                      <p class="font-medium text-gray-800">Qo'llanma</p>
+                      <p class="text-sm text-gray-600">
+                        AI tizimidan foydalanish bo'yicha
+                      </p>
+                    </div>
+                  </div>
+                  <a
+                    href="./public/docs/guide.pdf.docx"
+                    class="p-2 hover:bg-indigo-200 rounded-lg transition"
+                    >📥</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Additional Resources -->
+            <div class="mb-8">
+              <h4 class="font-bold text-gray-800 mb-4">Qo'shimcha manbaalar</h4>
+              <div class="grid md:grid-cols-2 gap-4">
+                <div class="p-4 bg-gray-50 rounded-lg border border-gray-200">
+                  <h5 class="font-medium text-gray-800 mb-2">
+                    AI diagnostika haqida
+                  </h5>
+                  <p class="text-sm text-gray-600 mb-3">
+                    Sun'iy intellekt tibbiyotda qanday ishlatiladi
+                  </p>
+                  <a
+                    href="#"
+                    class="text-purple-600 hover:text-purple-700 text-sm font-medium"
+                    >Batafsil →</a
+                  >
+                </div>
+                <div class="p-4 bg-gray-50 rounded-lg border border-gray-200">
+                  <h5 class="font-medium text-gray-800 mb-2">Savol-javoblar</h5>
+                  <p class="text-sm text-gray-600 mb-3">
+                    Ko'p so'raladigan savollar va javoblar
+                  </p>
+                  <a
+                    href="#"
+                    class="text-purple-600 hover:text-purple-700 text-sm font-medium"
+                    >Batafsil →</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Note Section -->
+            <div
+              class="bg-gradient-to-r from-purple-50 to-blue-50 border border-purple-200 rounded-lg p-6"
+            >
+              <p class="text-sm text-gray-700 leading-relaxed">
+                <span class="font-semibold text-purple-700">📌 Eslatma:</span>
+                Konsultatsiya funksiyasi foyda ishlagani, foydalanuvchi
+                ma'lumotlarini kiritib yuborishi mumkin. Endi uni backend bilan
+                bog'lash va "Hujjatlar" tugmasini to'ldirish orqali saytni
+                yanada professional qilish mumkin.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <script>
+        // Function to open the Documents modal. This will try to find an element
+        // with id "docs-modal" and display it. If not found, it logs a warning
+        // and shows an alert as a fallback. No other DOM changes are made here.
+        function openDocsModal() {
+          const modal = document.getElementById("docs-modal");
+          if (modal) {
+            var isVisible = window.getComputedStyle(modal).display !== "none";
+            if (!isVisible) {
+              modal.style.display = "flex";
+              document.body.style.overflow = "hidden";
+            } else {
+              modal.style.display = "none";
+              document.body.style.overflow = "";
+            }
+          } else {
+            console.warn("docs-modal element not found");
+            alert("Hujjatlar oynasi ochildi (demo).");
+          }
+        }
+
+        function closeDocsModal() {
+          const modal = document.getElementById("docs-modal");
+          if (modal) {
+            modal.style.display = "none";
+            document.body.style.overflow = "";
+          }
+        }
+
+        // Expose to global scope so HTML onclicks can call it
+        window.openDocsModal = openDocsModal;
+        window.closeDocsModal = closeDocsModal;
+      </script>
 
       <footer class="bg-cyan-950">
         <div
@@ -504,13 +733,13 @@
                   id="aboutLink"
                   class="text-base-content hover:text-gray-500 transition-all duration-100"
                 >
-                  <a href="">Biz haqimizda</a>
+                  <a href="./about.html">Biz haqimizda</a>
                 </li>
                 <li
                   id=""
                   class="text-base-content hover:text-gray-500 transition-all duration-100"
                 >
-                  <a href="">Blog</a>
+                  <a href="./blog.html">Blog</a>
                 </li>
               </ul>
             </div>
@@ -523,25 +752,32 @@
                 id=""
                 class="text-base-content hover:text-gray-500 transition-all duration-100"
               >
-                <a href="">Yordam markazi</a>
+                <a href="./yordam.html">Yordam markazi</a>
               </li>
               <li
                 id=""
                 class="text-base-content hover:text-gray-500 transition-all duration-100"
               >
-                <a href="">Hujjatlar</a>
+                <a
+                  href="#"
+                  onclick="
+                    openDocsModal();
+                    return false;
+                  "
+                  >Hujjatlar</a
+                >
               </li>
               <li
                 id=""
                 class="text-base-content hover:text-gray-500 transition-all duration-100"
               >
-                <a href="">FAQ</a>
+                <a href="./faq.html">FAQ</a>
               </li>
               <li
                 id=""
                 class="text-base-content hover:text-gray-500 transition-all duration-100"
               >
-                <a href="">Bog'lanish</a>
+                <a href="#boglanish">Bog'lanish</a>
               </li>
             </ul>
           </div>

@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="uz">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>FAQ — Ko'p so'raladigan savollar</title>
+    <link rel="stylesheet" href="./src/output.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <style>
+      body {
+        font-family:
+          system-ui,
+          -apple-system,
+          "Segoe UI",
+          Roboto,
+          "Helvetica Neue",
+          Arial;
+        background: #f8fafc;
+        color: #0f172a;
+        margin: 0;
+      }
+      .container {
+        max-width: 900px;
+        margin: 28px auto;
+        padding: 32px;
+      }
+      header {
+        padding: 24px 24px;
+        background: linear-gradient(90deg, #7c3aed, #2563eb);
+        color: #fff;
+      }
+      h1 {
+        margin: 0 0 8px;
+        font-size: 32px;
+        line-height: 1.1;
+      }
+      .back-btn {
+        display: inline-block;
+        margin: 16px 0 20px;
+        padding: 10px 14px;
+        background: linear-gradient(90deg, #2563eb, #7c3aed);
+        color: white;
+        border-radius: 10px;
+        text-decoration: none;
+      }
+      details {
+        background: white;
+        border: 1px solid #e6e9ef;
+        border-radius: 10px;
+        padding: 18px;
+        margin-bottom: 14px;
+      }
+      summary {
+        cursor: pointer;
+        font-weight: 700;
+        font-size: 18px;
+        list-style: none;
+        outline: none;
+      }
+      summary::-webkit-details-marker {
+        display: none;
+      }
+      .chev {
+        float: right;
+        font-weight: 700;
+      }
+      .answer {
+        margin-top: 12px;
+        color: #334155;
+        line-height: 1.6;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1>AI Doktor — Ko'p so'raladigan savollar</h1>
+      </div>
+    </header>
+
+    <main class="container">
+      <a class="back-btn" href="index.html">← Asosiy sahifaga qaytish</a>
+
+      <details>
+        <summary>
+          1) Konsultatsiya qanday ishlaydi? <span class="chev">+</span>
+        </summary>
+        <div class="answer">
+          Siz ariza yuborasiz: ism, email, telefon va muammo haqida qisqacha
+          ma'lumot. Biz murojaatni tekshirib, 24-72 soat ichida javob beramiz
+          yoki telefon orqali bog'lanamiz.
+        </div>
+      </details>
+
+      <details>
+        <summary>
+          2) Ariza yuborgandan keyin qancha vaqt ichida javob olaman?
+          <span class="chev">+</span>
+        </summary>
+        <div class="answer">
+          Odatda 24-72 soat ichida. Favqulodda holatlar uchun kontakt telefon
+          orqali murojaat qiling.
+        </div>
+      </details>
+
+      <details>
+        <summary>
+          3) Ma'lumotlarim xavfsizmi? <span class="chev">+</span>
+        </summary>
+        <div class="answer">
+          Ha. Barcha ma'lumotlar maxfiylik siyosatiga muvofiq saqlanadi va faqat
+          xizmat ko'rsatish maqsadida foydalaniladi.
+        </div>
+      </details>
+
+      <details>
+        <summary>
+          4) Hujjatlarni qanday yuborish mumkin? <span class="chev">+</span>
+        </summary>
+        <div class="answer">
+          Forma orqali yoki emailga ilova qilib yuborishingiz mumkin. Hujjatlar
+          PDF formatida bo'lishi ma'qul.
+        </div>
+      </details>
+
+      <details>
+        <summary>
+          5) AI natijasi tibbiy xulosani o‘rnata oladimi?
+          <span class="chev">+</span>
+        </summary>
+        <div class="answer">
+          Yo'q. AI tahlillari shifokor qarorini qo'llab-quvvatlaydi, lekin
+          yakuniy tashxis va davolash shifokor tomonidan belgilanadi.
+        </div>
+      </details>
+
+      <details>
+        <summary>
+          6) Bog'lanish uchun kimga murojaat qilaman?
+          <span class="chev">+</span>
+        </summary>
+        <div class="answer">
+          Footer bo'limidagi "Bog'lanish" ma'lumotlari orqali yoki ariza
+          formasidagi telefon/email orqali murojaat qiling.
+        </div>
+      </details>
+    </main>
+
+    <script>
+      // Toggle +/- indicator
+      document.querySelectorAll("details").forEach(function (d) {
+        var chev = d.querySelector(".chev");
+        d.addEventListener("toggle", function () {
+          if (d.open) chev.textContent = "-";
+          else chev.textContent = "+";
+        });
+      });
+    </script>
+  </body>
+</html>

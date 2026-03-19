@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="uz">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Yordam markazi — AI Doktor</title>
+    <link rel="stylesheet" href="./src/output.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <style>
+      body {
+        font-family:
+          system-ui,
+          -apple-system,
+          "Segoe UI",
+          Roboto,
+          "Helvetica Neue",
+          Arial;
+        background: #f8fafc;
+        color: #0f172a;
+        margin: 0;
+      }
+      .container {
+        max-width: 1000px;
+        margin: 28px auto;
+        padding: 28px;
+      }
+      header {
+        background: linear-gradient(90deg, #7c3aed, #2563eb);
+        color: #fff;
+        padding: 20px 28px;
+        border-radius: 10px;
+      }
+      header h1 {
+        margin: 0;
+        font-size: 26px;
+      }
+      .back {
+        display: inline-block;
+        margin: 14px 0;
+        padding: 8px 12px;
+        background: linear-gradient(90deg, #2563eb, #7c3aed);
+        color: #fff;
+        border-radius: 8px;
+        text-decoration: none;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: 1fr 320px;
+        gap: 20px;
+        margin-top: 18px;
+      }
+      .card {
+        background: #fff;
+        border: 1px solid #e6e9ef;
+        padding: 18px;
+        border-radius: 10px;
+      }
+      .search {
+        display: flex;
+        gap: 8px;
+        margin-bottom: 12px;
+      }
+      .search input {
+        flex: 1;
+        padding: 10px;
+        border-radius: 8px;
+        border: 1px solid #d1d5db;
+      }
+      .kb-item {
+        padding: 12px;
+        border-bottom: 1px dashed #eef2ff;
+      }
+      .kb-item:last-child {
+        border-bottom: none;
+      }
+      .kb-title {
+        font-weight: 700;
+        margin: 0;
+      }
+      .kb-desc {
+        margin: 6px 0 0;
+        color: #475569;
+      }
+      .contact-box {
+        background: linear-gradient(90deg, #eef2ff, #f8efff);
+        padding: 16px;
+        border-radius: 10px;
+      }
+      .btn {
+        display: inline-block;
+        padding: 10px 14px;
+        background: #2563eb;
+        color: #fff;
+        border-radius: 8px;
+        text-decoration: none;
+      }
+      @media (max-width: 880px) {
+        .grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Yordam markazi</h1>
+        <p style="margin: 6px 0 0; opacity: 0.95">
+          Sizning savollaringiz va muammolaringiz uchun tezkor yordam —
+          maqolalar, qo'llanmalar va kontaktlar.
+        </p>
+      </header>
+
+      <a class="back" href="index.html">← Asosiy sahifaga qaytish</a>
+
+      <div class="grid">
+        <main>
+          <div class="card">
+            <div class="search">
+              <input
+                id="kb-search"
+                placeholder="Savol yoki kalit so'z qidirish..."
+                aria-label="qidirish"
+              />
+              <a id="clear-search" href="#" style="display: none" class="btn"
+                >Tozalash</a
+              >
+            </div>
+
+            <div id="kb-list">
+              <div class="kb-item" data-tags="konsultatsiya,ariza">
+                <p class="kb-title">
+                  Konsultatsiya arizasini qanday yuborish kerak?
+                </p>
+                <p class="kb-desc">
+                  Asosiy sahifadagi "Konsultatsiya" tugmasini bosib, forma
+                  orqali ism, email va kerakli ma'lumotlarni kiriting. Ariza
+                  qabul qilingachimiz sizga javob beramiz.
+                </p>
+              </div>
+
+              <div class="kb-item" data-tags="hujjat,upload">
+                <p class="kb-title">Hujjatlarni qanday yuborish mumkin?</p>
+                <p class="kb-desc">
+                  Hozir demo fayl yuklash offline bo'lishi mumkin. Ideal holatda
+                  siz PDF faylni ariza formasiga ilova qilasiz yoki email orqali
+                  yuborasiz.
+                </p>
+              </div>
+
+              <div class="kb-item" data-tags="maxfiylik,xavfsizlik">
+                <p class="kb-title">Shaxsiy ma'lumotlar qanday himoyalanadi?</p>
+                <p class="kb-desc">
+                  Ma'lumotlarimiz maxfiylik siyosatiga muvofiq saqlanadi. Biz
+                  uchinchi tomonlarga ma'lumot bermaymiz.
+                </p>
+              </div>
+
+              <div class="kb-item" data-tags="to'lov,tarif">
+                <p class="kb-title">Xizmat pullikmi?</p>
+                <p class="kb-desc">
+                  Demo versiya bepul. Kengaytirilgan xizmatlar va
+                  konsultatsiyalar uchun tariflar bo'lishi mumkin — batafsil
+                  ma'lumot uchun bizga yozing.
+                </p>
+              </div>
+
+              <div class="kb-item" data-tags="texnik,muammo">
+                <p class="kb-title">Sayt ishlamay qolsa nima qilish kerak?</p>
+                <p class="kb-desc">
+                  Brauzer keshi (cache)ni tozalash va sahifani qayta yuklashni
+                  sinab ko'ring. Muammo davom etsa, bizga email yuboring.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div style="margin-top: 18px" class="card">
+            <h3 style="margin: 0 0 10px">Boshqa manbalar</h3>
+            <ul style="margin: 0; padding-left: 18px">
+              <li><a href="faq.html">FAQ — Ko'p so'raladigan savollar</a></li>
+              <li>
+                <a
+                  href="#"
+                  onclick="
+                    openDocsModal();
+                    return false;
+                  "
+                  >Hujjatlar</a
+                >
+              </li>
+            </ul>
+          </div>
+        </main>
+
+        <aside>
+          <div class="contact-box">
+            <h4 style="margin: 0 0 8px">Kontakt</h4>
+            <p style="margin: 0 0 12px; color: #1f2937">
+              Telefon: +998 90 123 45 67<br />Email: support@aidoktor.uz
+            </p>
+            <a href="mailto:support@aidoktor.uz" class="btn">Email yuborish</a>
+          </div>
+
+          <div style="margin-top: 16px" class="card">
+            <h4 style="margin: 0 0 8px">Ish vaqti</h4>
+            <p style="margin: 0; color: #475569">
+              Dushanba — Juma: 09:00 — 18:00<br />Yakshanba, Shanba: dam olish
+            </p>
+          </div>
+        </aside>
+      </div>
+    </div>
+
+    <script>
+      // Simple client-side filtering for knowledge base items
+      (function () {
+        var input = document.getElementById("kb-search");
+        var list = document.getElementById("kb-list");
+        var items = Array.from(list.querySelectorAll(".kb-item"));
+        var clear = document.getElementById("clear-search");
+
+        function filter(q) {
+          q = q.trim().toLowerCase();
+          if (!q) {
+            items.forEach(function (it) {
+              it.style.display = "block";
+            });
+            clear.style.display = "none";
+            return;
+          }
+          items.forEach(function (it) {
+            var text = (it.textContent || "").toLowerCase();
+            var tags = (it.getAttribute("data-tags") || "").toLowerCase();
+            if (text.indexOf(q) !== -1 || tags.indexOf(q) !== -1)
+              it.style.display = "block";
+            else it.style.display = "none";
+          });
+          clear.style.display = "inline-block";
+        }
+
+        if (input) {
+          input.addEventListener("input", function () {
+            filter(this.value);
+          });
+        }
+        if (clear) {
+          clear.addEventListener("click", function (e) {
+            e.preventDefault();
+            input.value = "";
+            filter("");
+          });
+        }
+      })();
+    </script>
+  </body>
+</html>
